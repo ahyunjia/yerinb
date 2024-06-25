@@ -1,6 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import { addWishCount } from "../../../../data/firestore";
 
+export const dynamic = "force-dynamic";
 
 export async function GET(request) {
     try {
