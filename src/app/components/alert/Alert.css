@@ -16,7 +16,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--brown-color);
-    z-index: 5;
+    z-index: 2;
 }
 
 .msg-box {

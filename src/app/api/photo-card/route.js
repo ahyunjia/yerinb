@@ -4,6 +4,7 @@ import { fetchPhotoCard } from "../../../../data/firestore";
 export async function GET(request) {
     try {
         const pc_idx = getRandomInt()
+        console.log(pc_idx)
         const img = await fetchPhotoCard(pc_idx);
         if (img === null) {
             return new Response(null, {status: 204})
