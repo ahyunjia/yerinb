@@ -15,9 +15,11 @@ export default function LetterForm({initialValue}) {
     const router = useRouter()
 
     const handleChange = (e) => {
+        const {name, value, maxLength} = e.target
+        const input = value.slice(0, maxLength)
         setValues({
             ...values,
-            [e.target.name]: e.target.value,
+            [name]: input,
         })
     }
 
@@ -28,6 +30,14 @@ export default function LetterForm({initialValue}) {
     const handleSubmit = () => {
         if (values.to=="" || values.from=="" || values.body=="") {
             alert("편지를 모두 작성해주세요!")
+            return
+        }
+        if (values.to.length>7 || values.from.length>7) {
+            alert(`수신인과 발신인은\n7자까지만 가능합니다.`)
+            return
+        }
+        if (values.body>500) {
+            alert(`편지는\n500자까지만 가능합니다.`)
             return
         }
 
