@@ -1,0 +1,139 @@
+.candles {
+  height: 150px;
+  display: flex;
+  position: absolute;
+  gap:60px;
+  z-index: 2;
+
+}
+
+.candle {
+  position: relative;
+  width: 20%;
+}
+
+#glow {
+  position: absolute;
+  left: calc(50% - .1em);
+  bottom: calc(35% + 7em);
+  width: .2em;
+  height: .2em;
+  border-radius: 100%;
+  opacity: .7;
+}
+  
+#candle {
+  position: absolute;
+  left: calc(50% - .75em);
+  bottom: 35%;
+  width: 1.5em;
+  height: 10em;
+  overflow: hidden;
+}
+
+#candle:before {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  content: '';
+  width: 84%;
+  height: 80%;
+  background: linear-gradient(whitesmoke 0, pink 125%);
+  border-radius: .25em;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border: none;
+}
+  
+#top {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 2em;
+  background-color: transparent;
+}
+
+#knot {
+  position: absolute;
+  bottom: 3px;;
+  left: calc(50% - .05em);
+  height: .5em;
+  width: .1em;
+  background-color: #0f3146;
+}
+
+#flame {
+  position: absolute;
+  bottom: .15em;
+  width: 1.5em;
+  height: 1.6em;
+  background-color: #ffee86;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 .1em #ffee86;
+  transform: rotateY(30deg);
+  cursor: pointer;
+}
+
+#flame:after {
+  position: absolute;
+  content: '';
+  width: .7em;
+  height: .9em;
+  bottom: 10%;
+  left: calc(50% - .35em);
+  background-color: #ff3200;
+  border-radius: 100%;
+  animation: burnInner 1.5s ease-in-out infinite;
+}
+  
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 1.5em 2.2em rgba(255, 246, 162, .75);
+  }
+  50% {
+    box-shadow: 0 0 1.5em 2.2em rgba(255, 246, 162, .6);
+  }
+  100% {
+    box-shadow: 0 0 1.5em 2.2em rgba(255, 246, 162, .75);
+  }
+}
+
+@keyframes burn {
+  0% {
+    height: 1.7em;
+    transform: rotateY(30deg);
+  }
+  50% {
+    height: 1.3em;
+    transform: rotateY(0deg);
+    opacity: .9;
+  }
+  100% {
+    height: 1.7m;
+    transform: rotateY(30deg);
+  }
+}
+  
+@keyframes burnInner {
+  0% {
+    height: .9em;
+    transform: rotateX(0deg);
+  }
+  50% {
+    height: .8em;
+    transform: rotateX(30deg);
+  }
+  100% {
+    height: .9em;
+    transform: rotateX(0deg);
+  }
+}
+
+.glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.burn {
+  animation: burn 1.5s ease-in-out infinite;
+}

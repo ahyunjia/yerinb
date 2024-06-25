@@ -1,0 +1,60 @@
+.birthday-wish-container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow-color);
+    overflow: hidden;
+}
+
+.cake-candle-container {
+    left: 50%;
+    max-width: 350px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+}
+
+.cake-container {
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+    position: absolute;
+}
+
+.cake {
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: 
+    radial-gradient(
+      circle at 100% 90%,
+      white,
+      var(--gray-color)
+    );
+}
+
+.cake-flower {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    z-index: 1;
+    top: -10%;
+}
+
+.instruction {
+    width: 100%;
+    position: absolute;
+    color: var(--blue-color);
+    font-size: 2.3em;
+    font-weight: 600;
+    text-align: center;
+}
+
+#top-inst {
+    top: 20%;
+}
+
+#bottom-inst {
+    top: 80%;
+}

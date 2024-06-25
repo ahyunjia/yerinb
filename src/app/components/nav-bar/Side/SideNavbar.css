@@ -1,0 +1,51 @@
+
+.ham-logo-container {
+    width: 90%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+}
+
+.sidenavbar-container {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-100%);
+    z-index: 3;
+    overflow: scroll;
+}
+
+.side-panel-back {
+    width: 100%;
+    height: 100%;
+    background-color: var(--brown-color);
+    transform: translateX(-100%);
+    transition: 0.5s ease-in-out;
+}
+
+#side-panel-show {
+    transform: translateX(0);
+}
+
+.sidecontent-container {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

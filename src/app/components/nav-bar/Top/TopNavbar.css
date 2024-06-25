@@ -1,0 +1,11 @@
+.topnavbar-container {
+    width: 90%;
+    height: 5%;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    justify-content: space-evenly;
+}

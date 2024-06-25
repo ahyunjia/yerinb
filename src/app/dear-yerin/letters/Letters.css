@@ -1,0 +1,99 @@
+.dear-yerin-container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray-color);
+
+    display: flex;
+    justify-content: center;
+}
+
+.letters-container { 
+    position: absolute;
+    width:100%;
+    height: 87%;
+    top: 13%;
+    overflow: scroll;
+    margin: 0 auto;
+}
+
+.letters {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.letter-container {
+    position: relative;
+    width: 310px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: var(--blue-gray-color);
+    margin: 10px;
+    color: var(--brown-color);
+    overflow: hidden;
+}
+
+.upper-line, .bottom-line {
+    position: absolute;
+    background-color: var(--brown-color);
+    height: 2px;
+    width: 100px;
+}
+
+.upper-line {
+    top: 50px;
+}
+
+.bottom-line {
+    bottom: 50px;
+    right: 0px;
+}
+
+.letter-to {
+    height: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.letter-from {
+    height: 50px;
+    padding-top: 10px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.letter-body {
+    width: 100%;
+    height: 150px;
+    margin-top: 2px;
+    /* margin-bottom: 2px; */
+    margin: auto;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.write-letter-btn {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--brown-color);
+    right: 5%;
+    bottom: 5%;
+    color: white;
+    text-align: center;
+}
+
+.letter-icon {
+    /* width: 100%;
+    height: 100%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: red; */
+
+}
