@@ -1,7 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import { fetchPhotoCard } from "../../../../data/firestore";
 
-export const dynamic = 'auto'
+export const dynamic = "force-dynamic";
 
 export async function GET(request) {
     try {
