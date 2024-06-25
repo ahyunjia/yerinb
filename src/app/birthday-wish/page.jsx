@@ -45,7 +45,7 @@ export default function BirthdayWish() {
     const getCarrotNum = async () => {
 
         try{
-            const response = await fetch(process.env.NEXT_PUBLIC_ROOT_URL + "/api/wish-count");
+            const response = await fetch(`${process.env.NEXT_PUBLIC_ROOT_URL}/api/dear-yerin`);
             if (response.status != 200) {
                 throw new Error();
             }

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 async function getData() {
     try{
-        const response = await fetch(process.env.NEXT_PUBLIC_ROOT_URL + "/api/dear-yerin", { cache: 'no-store' })
+        const response = await fetch(`${process.env.NEXT_PUBLIC_ROOT_URL}/api/dear-yerin`, { cache: 'no-store' })
         if (response.status != 200) {
             throw new Error();
         }

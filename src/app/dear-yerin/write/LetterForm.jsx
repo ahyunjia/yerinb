@@ -50,7 +50,7 @@ export default function LetterForm({initialValue}) {
                 }
               }
 
-            const response = await fetch(process.env.NEXT_PUBLIC_ROOT_URL + "/api/dear-yerin", options)
+            const response = await fetch(`${process.env.NEXT_PUBLIC_ROOT_URL}/api/dear-yerin`, options)
             if (response.status != 200) {
                 throw new Error()
             }
