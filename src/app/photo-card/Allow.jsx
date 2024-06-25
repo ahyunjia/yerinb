@@ -18,7 +18,7 @@ export default function Allow() {
     const handleClick = async () => {
         setLoading(true)
         try{
-            const response = await fetch(process.env.NEXT_PUBLIC_ROOT_URL+"/api/photo-card")
+            const response = await fetch(`${process.env.NEXT_PUBLIC_ROOT_URL}/api/photo-card`)
             if (response.status != 200) {
                 throw new Error();
             }
